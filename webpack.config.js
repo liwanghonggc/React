@@ -22,5 +22,10 @@ module.exports = {
             //配置使用babel-loader解析jsx语法转成react格式的对象
             {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/}
         ]
+    },
+
+    resolve: {
+        //表示这几个文件的后缀名可以省略,如导入组件时若不配置这里,就需要写文件后缀名
+        extensions: ['.js', '.jsx', '.json']
     }
 };

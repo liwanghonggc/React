@@ -1,0 +1,30 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gitignore
+.idea/
+node_modules/ajv/lib/.DS_Store
+node_modules/copy-concurrently/README.md~
+node_modules/extglob/lib/.DS_Store
+node_modules/micromatch/lib/.DS_Store
+node_modules/move-concurrently/README.md~
+node_modules/querystring/.History.md.un~
+node_modules/querystring/.Readme.md.un~
+node_modules/querystring/.package.json.un~
+node_modules/querystring/test/.index.js.un~
+node_modules/webpack-cli/node_modules/micromatch/lib/.DS_Store
+node_modules/webpack-dev-server/node_modules/extglob/lib/.DS_Store
+node_modules/webpack-dev-server/node_modules/http-proxy-middleware/node_modules/micromatch/lib/.DS_Store
+node_modules/webpack-dev-server/node_modules/url/node_modules/querystring/.History.md.un~
+node_modules/webpack-dev-server/node_modules/url/node_modules/querystring/.Readme.md.un~
+node_modules/webpack-dev-server/node_modules/url/node_modules/querystring/.package.json.un~
+node_modules/webpack-dev-server/node_modules/url/node_modules/querystring/test/.index.js.un~
+node_modules/webpack/node_modules/ajv/lib/.DS_Store
+node_modules/webpack/node_modules/micromatch/lib/.DS_Store
+node_modules/webpack/node_modules/schema-utils/node_modules/ajv/lib/.DS_Store

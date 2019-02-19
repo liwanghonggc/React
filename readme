@@ -24,3 +24,9 @@
 4、JSX语法
    1) 为jsx中的元素添加class类名,需要使用className来替代class,htmlFor替换label的for属性
 
+5、在导入组件的时候,如何省略组件的.jsx后缀名
+   打开 webpack.config.js,并在导出的配置对象中,新增如下节点
+   resolve: {
+       //表示这几个文件的后缀名可以省略不写
+       extensions: ['.js', '.jsx', '.json'],
+   }
