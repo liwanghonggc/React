@@ -1,6 +1,8 @@
 import React from 'react'
 
-import CmtItem from '@/components/CmtItem'
+import CmtItem from '@/components/CmtItem2'
+
+import cssobj from '@/css/cmtList.css'
 
 export default class CmtList extends React.Component{
     constructor(){
@@ -21,7 +23,7 @@ export default class CmtList extends React.Component{
     render(){
         return <div>
             {/* 在行内样式中,如果是数值类型的样式,则可以不用引号包裹.如果是字符串类型的样式值,必须使用引号包裹*/}
-            <h1 style={{color: 'red', fontSize: '35px'}}>这是评论列表组件</h1>
+            <h1 className={cssobj.title}>这是评论列表组件</h1>
 
             {this.state.CommentList.map(item => <CmtItem {...item} key={item.id}></CmtItem>)}
         </div>;

@@ -4,7 +4,7 @@ import React from 'react'
 //把创建好的组件和虚拟DOM放到页面上展示的
 import ReactDOM from 'react-dom'
 
-import CmtList from '@/components/CmtList'
+import CmtList from '@/components/CmtList2'
 
 ReactDOM.render(<div><CmtList/></div>, document.getElementById('app'));
 
