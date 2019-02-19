@@ -22,4 +22,5 @@
      npm i html-webpack-plugin -D,将index.html等页面生成到内存中去,这样操作更快
 
 4、JSX语法
+   1) 为jsx中的元素添加class类名,需要使用className来替代class,htmlFor替换label的for属性
 
