@@ -26,6 +26,11 @@ module.exports = {
 
     resolve: {
         //表示这几个文件的后缀名可以省略,如导入组件时若不配置这里,就需要写文件后缀名
-        extensions: ['.js', '.jsx', '.json']
+        extensions: ['.js', '.jsx', '.json'],
+
+        //配置@代表项目根目录的src目录,拼接完是一个绝对路径
+        alias: {
+            '@': path.join(__dirname, './src')
+        }
     }
 };
