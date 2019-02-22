@@ -4,7 +4,7 @@ import React from 'react'
 //把创建好的组件和虚拟DOM放到页面上展示的
 import ReactDOM from 'react-dom'
 
-import ChangeState from '@/components/ChangeState'
+import BindInputValue from '@/components/BindInputValue'
 
-ReactDOM.render(<div><ChangeState/></div>, document.getElementById('app'));
+ReactDOM.render(<div><BindInputValue/></div>, document.getElementById('app'));
 
