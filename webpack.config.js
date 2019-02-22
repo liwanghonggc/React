@@ -22,7 +22,11 @@ module.exports = {
             //配置使用babel-loader解析jsx语法转成react格式的对象
             {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/},
             //为.css后缀名的样式表,启用CSS模块化,配置以后样式也有作用域了
-            {test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}
+            {test: /\.css$/, use: ['style-loader', 'css-loader']},
+            //引入bootstrap之后,webpack无法处理字体图标,需要安装url-loader并配置这里
+            {test: /\.ttf|woff|woff2|eot|svg$/, use: "url-loader"},
+            //打包处理scss文件的loader
+            {test: /\.scss$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]', 'sass-loader'] }
         ]
     },
 

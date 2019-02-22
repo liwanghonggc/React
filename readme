@@ -62,4 +62,13 @@
 6、使用localIdentName自定义生成的类名格式
    {test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}
 
-7、
+7、在项目中启用模块化并同时使用bootstrap
+   1) 安装bootstrap,cnpm i bootstrap@3.3.7 -S,@后面指定版本号,否则安装的是最新版本
+   2) 安装url-loader,cnpm i url-loader -D(引入bootstrap之后,webpack无法处理字体图标,需要安装url-loader并配置webpack.config.js)
+   3) 安装file-loader,cnpm i file-loader -D(url-loader内部依赖file-loader)
+   4) 把自己的样式表,定义为.scss 文件,第三方的样式表还是以.css结尾,我们只需要为自己的.scss文件,启用模块化即可
+      运行cnpm i sass-loader node-sass -D 安装能够解析scss文件的loader
+   5) 添加loader规则,打包处理scss文件的loader
+      {test: /\.scss$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]', 'sass-loader']}
+   6) 导入import 'bootstrap/dist/css/bootstrap.css'
+
