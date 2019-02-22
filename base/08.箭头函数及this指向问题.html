@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this指向</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+
+    <script>
+        onload = function () {
+            const btn = document.getElementById("btn");
+
+            /**
+            btn.onclick = function () {
+                 //这里的this就是btn,可以变红
+                 this.style.backgroundColor = 'red'
+            };
+             */
+
+            /**
+            console.log("1" + this);
+            
+            btn.onclick = () => {
+                //箭头函数中的this和1处this指向一样,是window,不可以变红
+                console.log("2" + this);
+                this.style.backgroundColor = 'red'
+            }
+             */
+
+            /**
+            btn.onclick = function () {
+                setTimeout(function () {
+                    //定时函数默认是window调用的,这里的this也是window,不可以变红
+                    this.style.backgroundColor = 'red'
+                }, 1000)
+            }
+             */
+
+            btn.onclick = function () {
+                //1处
+                setTimeout(()=> {
+                    //箭头函数里,这里的this是和1处一样,是btn,所以可以变红
+                    this.style.backgroundColor = 'red'
+                }, 1000)
+            }
+        }
+    </script>
+</body>
+</html>
