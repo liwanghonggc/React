@@ -20,7 +20,9 @@ module.exports = {
     module: {
         rules: [
             //配置使用babel-loader解析jsx语法转成react格式的对象
-            {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/}
+            {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/},
+            //为.css后缀名的样式表,启用CSS模块化,配置以后样式也有作用域了
+            {test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}
         ]
     },
 

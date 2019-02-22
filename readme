@@ -48,4 +48,18 @@
 
    什么情况下使用有状态组件?什么情况下使用无状态组件?
    1)如果一个组件需要有自己的私有数据,则推荐使用class创建的有状态组件
-   2)React官方说:无状态组件,由于没有自己的state和生命周期函数,所以运行效率会比有状态组件稍微高一些；
+   2)React官方说:无状态组件,由于没有自己的state和生命周期函数,所以运行效率会比有状态组件稍微高一些
+
+7、配置可以导入css组件
+   步骤
+   1)安装组件,cnpm i style-loader css-loader -D
+   2)配置webpack.config.js文件,{test: /\.css$/, use: ['style-loader', 'css-loader?modules']}
+   3)在需要的组件中import导入样式表,并接收模块化的CSS样式对象
+     import cssObj from '../css/CmtList.css'
+   4)在需要的HTML标签上使用className指定模块化的样式
+     <h1 className={cssObj.title}>评论列表组件</h1>
+
+6、使用localIdentName自定义生成的类名格式
+   {test: /\.css$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}
+
+7、
