@@ -72,3 +72,11 @@
       {test: /\.scss$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]', 'sass-loader']}
    6) 导入import 'bootstrap/dist/css/bootstrap.css'
 
+8、React中绑定事件推荐方式
+   <button onClick={ () => this.show('传参') }>按钮</button>
+
+   // 事件的处理函数,需要定义为一个箭头函数,然后赋值给函数名称
+   show = (arg1) => {
+       console.log('show方法' + arg1)
+   }
+

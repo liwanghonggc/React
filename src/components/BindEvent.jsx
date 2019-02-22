@@ -14,16 +14,18 @@ export default class BindEvent extends React.Component{
         return <div>
             BindEvent组件
             <hr/>
-            /*方式1*/
+
             {/*<button className="btn btn-primary" onClick={this.myClickHandler}>按钮</button>*/}
 
-            /*方式2*/
-            {<button className="btn btn-primary" onClick={}>按钮</button>}
+
+            {<button className="btn btn-primary" onClick={
+                () => this.myClickHandler('lwh')
+            }>按钮</button>}
         </div>
     }
 
     //实例方法
-    myClickHandler(){
-        console.log('李旺红')
+    myClickHandler = (arg) => {
+        console.log('李旺红' + arg)
     }
 }
